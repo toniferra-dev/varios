@@ -1,0 +1,77 @@
+div {
+  width:100px;
+  height:100px;
+  background: red;
+  position:absolute;
+  transition: background-color 2s ease;
+      top:100px;
+    left:100px;
+}
+
+@keyframes mover {
+  0%{
+    top:100px;
+    left:100px;
+  }
+  50%{
+    top:100px;
+    left:1000px;
+  }
+  80%{
+    top:500px;
+    left:500px;
+  }
+    100%{
+    top:2000px;
+    right:100px;
+  }
+  
+}
+
+div {
+  animation-name:mover;
+  animation-duration: 5s;
+  animation-fill-mode:forwards;
+  
+/*tiempo de espera ó avanzar con valor negativo */  
+/* -webkit-animation-delay:-1s;*/
+  
+/*cantidad de repeticiones */ 
+ /*-webkit-animation-iteration-count:2;*/
+  
+/*Donde parar la animación- forrwards ó backwards*/
+ /*-webkit-animation-fill-mode:forwards;*/
+  
+/*pausa en la animación con paused */   
+/*-webkit-animation-play-state:running;*/
+  
+/*reverso de la animación (reverse)*/
+/*-webkit-animation-direction:reverse;*/
+
+/*Control del timming  */
+/*-webkit-animation-timing-function:cubic-bezier(.5, 1.5, .5, -2.5);*/
+  
+/* -webkit-animation-timing-function:steps(5); */
+  
+}
+
+div:hover{
+  background-color: yellow;
+}
+
+
+
+.desplegable{
+  background-color: #fff;
+  height: 200px;
+  display: none;
+  transform: translateX(-200px);
+  background-color: yellow;
+}
+
+.desplegable:hover{
+  display: block;
+  transition: 1s;
+  transform: translateY(200px);
+  background-color: red;
+}

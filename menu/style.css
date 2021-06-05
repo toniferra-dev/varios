@@ -1,0 +1,43 @@
+html{
+	font-size: 20px;
+}
+nav{
+	display: flex;
+	justify-content: space-between;
+	padding: 30px;
+	background-color: #efefef;
+}
+
+div{
+	text-align: right;
+	input{
+		display: none;
+	}
+	/* Desktop elimar el Label*/
+	@media only screen and (min-width:900px){
+		label{
+			display: none;
+		}
+	}
+	/* --- */
+}
+ul{
+	display: none;
+/* Desktop Flexbox*/
+		@media only screen and (min-width:900px){
+		display: flex;
+			width: 50%;
+			& li{
+				margin:0 1rem;
+				
+				&:before{
+					content:"‣";
+				}
+			}
+	}
+	/* --- */
+}
+
+input:checked + ul{
+	display: block;
+}

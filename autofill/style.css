@@ -1,0 +1,29 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+div.auto-fill div, div.auto-fit div{
+	background-color: green;
+	width: 100%;
+	height: 100px;
+}
+div.auto-fit div{
+	background-color: orange;
+	margin: 1rem 0;
+}
+
+
+/* el AUTO-FILL rellena con columnas vacias */
+.auto-fill{
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+	grid-gap: 1rem;
+}
+
+/* el AUTO-FIT ocupa todo el espacio con los elementos reales */
+.auto-fit{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+	grid-gap: 1rem;
+}
+
